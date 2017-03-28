@@ -87,12 +87,12 @@ def all_holidays_with_bbq(holiday_hash)
 
     holiday_hash.each do |season, holiday|
 
-        holiday.map do |name, supplies|
-            if supplies.include? "BBQ" == true
+        holiday.each do |name, supplies|
+            if (supplies.include? "BBQ") == true
+                puts "hello"
                 bbqCheck.push(name)
-
             end
-            binding.pry
+            # binding.pry
         end
     end
     bbqCheck
